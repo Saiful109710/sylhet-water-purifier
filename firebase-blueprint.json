@@ -1,0 +1,73 @@
+{
+  "entities": {
+    "products": {
+      "title": "Products",
+      "description": "Sylhet Water Purifier products catalog",
+      "properties": {
+        "id": { "type": "string", "description": "Product ID" },
+        "name": { "type": "string", "description": "Product name" },
+        "category": { "type": "string", "description": "Category key" },
+        "budgetTier": { "type": "string", "description": "Budget | Standard | Premium" },
+        "price": { "type": "number", "description": "Price in BDT" },
+        "stock": { "type": "number", "description": "Current stock level" },
+        "minStockAlert": { "type": "number", "description": "Low stock alert threshold" },
+        "description": { "type": "string", "description": "Product description" },
+        "specifications": { "type": "object", "description": "Product specs" },
+        "imageUrl": { "type": "string", "description": "Product image URL" },
+        "isFeatured": { "type": "boolean", "description": "Featured status" },
+        "setupFee": { "type": "number", "description": "Installation fee BDT" }
+      },
+      "required": ["name", "category", "price", "stock"]
+    },
+    "orders": {
+      "title": "Orders",
+      "description": "Customer water purifier orders",
+      "properties": {
+        "id": { "type": "string", "description": "Order document ID" },
+        "orderNumber": { "type": "string", "description": "Order tracking code e.g. SWP-2026-001" },
+        "customerName": { "type": "string", "description": "Customer name" },
+        "customerPhone": { "type": "string", "description": "Customer phone number" },
+        "customerEmail": { "type": "string", "description": "Customer email optional" },
+        "address": { "type": "string", "description": "Delivery address in Sylhet" },
+        "cityZone": { "type": "string", "description": "Delivery area" },
+        "items": { "type": "array", "description": "Ordered items array" },
+        "subtotal": { "type": "number", "description": "Subtotal in BDT" },
+        "setupTotal": { "type": "number", "description": "Setup total in BDT" },
+        "totalAmount": { "type": "number", "description": "Total price in BDT" },
+        "paymentMethod": { "type": "string", "description": "Cash on Delivery | bKash / Nagad | Bank Transfer" },
+        "status": { "type": "string", "description": "Pending | Confirmed | Installation Scheduled | Completed | Cancelled" },
+        "notes": { "type": "string", "description": "Order notes" },
+        "createdAt": { "type": "string", "description": "ISO timestamp" }
+      },
+      "required": ["orderNumber", "customerName", "customerPhone", "address", "items", "totalAmount"]
+    },
+    "messages": {
+      "title": "Customer Inquiries",
+      "description": "Customer contact messages and inquiries",
+      "properties": {
+        "id": { "type": "string", "description": "Message ID" },
+        "name": { "type": "string", "description": "Customer name" },
+        "phone": { "type": "string", "description": "Customer phone" },
+        "setupType": { "type": "string", "description": "Inquiry type" },
+        "message": { "type": "string", "description": "Message body" },
+        "createdAt": { "type": "string", "description": "ISO timestamp" }
+      },
+      "required": ["name", "phone"]
+    },
+    "portfolio": {
+      "title": "Portfolio Projects",
+      "description": "Completed water purifier projects in Sylhet",
+      "properties": {
+        "id": { "type": "string", "description": "Portfolio item ID" },
+        "title": { "type": "string", "description": "Project title" },
+        "category": { "type": "string", "description": "Category" },
+        "description": { "type": "string", "description": "Project details" },
+        "location": { "type": "string", "description": "Location in Sylhet" },
+        "completedDate": { "type": "string", "description": "Completion date" },
+        "mediaType": { "type": "string", "description": "image | video" },
+        "mediaUrl": { "type": "string", "description": "Media URL" }
+      },
+      "required": ["title", "description"]
+    }
+  }
+}

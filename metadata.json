@@ -1,0 +1,6 @@
+{
+  "name": "Sylhet Water Purifier - Premium Water Filter & Treatment Solutions",
+  "description": "Sylhet's premier shop & admin platform for water filter cartridges, RO machines, electric/non-electric purifiers, and industrial IRP plant setups.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
